@@ -1,5 +1,5 @@
 # 函数：将NetCDF数据转换为CSV
-def netcdf_to_csv(datafile, variable, output_dir, convert_units):
+def netcdf_to_csv1(datafile, variable, output_dir, convert_units):
     ds = xr.open_dataset(datafile)
     var_data = ds[variable]
 
@@ -32,7 +32,7 @@ def netcdf_to_csv(datafile, variable, output_dir, convert_units):
 
 
 # 函数：转换指定目录下的所有NetCDF文件
-def convert_all_netcdf_in_directory(directory, variable, output_dir):
+def convert_all_netcdf_in_directory1(directory, variable, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
